@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div class="feedback-card">
+    <h2 class="fw-bold">We Value your feedback!</h2>
+    <p class="text-muted"> Share your experience</p>
+    <div class="star-rating i">
+     <i class="fa-solid fa-star" data-value="1"></i>
+                <i class="fa-solid fa-star" data-value="2"></i>
+                <i class="fa-solid fa-star" data-value="3"></i>
+                <i class="fa-solid fa-star" data-value="4"></i>
+                <i class="fa-regular fa-star-half-stroke" data-value="5"></i>
+    </div>
+    <div id="feedbackform">
+      <div class="my-3">
+        <textarea class="form-control" rows="4" placeholder="write your feedback here ......"> </textarea>
+      </div>
+      <button type="submit" class="btn btn-submit w-100"> Submit feedback</button>
+
+    </div>
+  </div>
+</body>
+<style> 
+  body{
+    background: #106c6c;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'poppins' , 'Courier', monospace;
+
+  }
+  .feedback-card{
+    max-width:500px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0 0 0 0.1);
+  }
+  .star-rating{
+    font-size:24px;
+    cursor:pointer;
+    
+  }
+  .star-rating i.active{
+    color:#c6f106;
+  }
+  .btn btn-submit w-100{
+    background: #0ac0cd;
+    color:white;
+    border-radius: 10px;
+    align-items:center;
+    transition:0.3s;
+    font-size:16px;
+  }
+  .btn-submit:hover{
+    background: #0ac0cd;
+    color:white;
+  }
+</style>
+</html>

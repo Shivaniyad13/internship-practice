@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>hello</h1>
+  <p para>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, sequi blanditiis! Ab laboriosam praesentium
+    harum, commodi ex culpa iure facere ipsam quod cumque officia soluta, architecto, quidem et quisquam ducimus.</p>
+  <div class="box">Box1</div>
+  <div class="box">Box2</div>
+  <p>para 1</p>
+  <p>para 2</p>
+  <div class="box">Box 4</div>
+  <div class="boxes">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <script>
+    function printparaText() {
+      const para = document.getElementById("para");
+      console.log(para.textContent);
+      printparaText();
+    }
+    const boxes = document.getElementsByClassName('box');
+    console.log(boxes.length);
+    const paras = document.getElementsByTagName('p');
+    cosole.log(paras.length);
+
+    function printParaText() {
+      const box = document.querySelector(".box");
+      console.log(box.textContent)
+    }
+    function printParaText() {
+      const box = document.querySelectorAll(".boxes  .box");
+      console.log(boxes.textContent)
+    }
+    function printParaText() {
+      const box = document.querySelector("#boxes  .box");
+      console.log(boxes.textContent)
+    }
+    function printParaText() {
+      const box = document.querySelector(".boxes  .box:nth-child(3)");
+      console.log(boxes.textContent)
+    }
+    const boxes = document.getElementById("boxes");
+    const children = document.queryselectorAll("#boxes .box");
+    console.log(children.length);
+  </script>
+</body>
+
+
+</html>

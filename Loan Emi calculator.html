@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="container"> 
+    <h1>Loan EMI Calculator</h1>
+  <p> Loan Amount Rs.</p>
+    <input  onchange="calculateLoan"  class="input" type="number" min="1"  max=" 500000"id=" loan-amount" value="10000">
+  <p>Interest Rate %</p>
+  <input onchange="calculateLoan"  class="input" type="number" min="0"  max=" 100"id=" interest-rate" value="12" step="1">
+  <p>Month to pay</p>
+  <input  onchange="calculateLoan" class="input" type="number" min="1"  max="60"id="months-to-pay" value="12" step="12">
+  <p class="payment" id="payment">Monthly payment:</p>
+  </div>
+</body>
+<style>
+ body{
+    margin:0;
+    padding:0;
+    display :flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+
+  }
+  h1{
+text-align: center;
+  }
+  .container{
+    padding:20px;
+    background:#3498;
+    color:aliceblue;
+    border-radius:10px;
+  }
+  .input{
+    width:100%;
+  height:30px;
+    font-siz:20px;
+  }
+  .payment{
+    font-weight: 650;
+    font-size:20px ;
+  }
+
+</style>
+<script>
+function calculateLoan(){
+  LoanAmountValue=document.getElementByID(
+    "Loan-amount" ).value;
+    interestRateValue=document.getElementByID(
+     " interest-rate").value;
+    MonthsTopayValue=document.getElementByID(
+     " months-to-pay").value; 
+     interest=(loanAmountValue*(interestRateValue*0.01))/MonthsTopayValue;
+     monthlyPayment=(loanAmountValue/MonthsTopayValue+interest).toFixed(2);
+     document.getElementByID("payment").innerHTML= `Monthly Payment: ${
+      monthlyPayment};`
+}
+</script>
+</html>
